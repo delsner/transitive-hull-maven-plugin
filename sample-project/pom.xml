@@ -14,25 +14,35 @@
     </modules>
     <packaging>pom</packaging>
 
-    <!--    <profiles>-->
-    <!--        <profile>-->
-    <!--            <id>transitive-hull</id>-->
-    <!--            <build>-->
-    <!--                <plugins>-->
-    <!--                    <plugin>-->
-    <!--                        <groupId>edu.tum.sse</groupId>-->
-    <!--                        <artifactId>transitive-hull-maven-plugin</artifactId>-->
-    <!--                        <version>0.0.1-SNAPSHOT</version>-->
-    <!--                        <executions>-->
-    <!--                            <execution>-->
-    <!--                                <goals>-->
-    <!--                                    <goal>transitive-hull</goal>-->
-    <!--                                </goals>-->
-    <!--                            </execution>-->
-    <!--                        </executions>-->
-    <!--                    </plugin>-->
-    <!--                </plugins>-->
-    <!--            </build>-->
-    <!--        </profile>-->
-    <!--    </profiles>-->
+    <build>
+        <extensions>
+            <extension>
+                <groupId>edu.tum.sse</groupId>
+                <artifactId>transitive-hull-maven-plugin</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>transitive-hull</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>edu.tum.sse</groupId>
+                        <artifactId>transitive-hull-maven-plugin</artifactId>
+                        <version>0.0.1-SNAPSHOT</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>transitive-hull</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

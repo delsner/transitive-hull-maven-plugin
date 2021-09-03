@@ -36,6 +36,11 @@
             <artifactId>maven-core</artifactId>
             <version>3.6.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-component-annotations</artifactId>
+            <version>1.7.1</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -44,7 +49,18 @@
                 <artifactId>maven-plugin-plugin</artifactId>
                 <version>3.6.0</version>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.plexus</groupId>
+                <artifactId>plexus-component-metadata</artifactId>
+                <version>1.7.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate-metadata</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
 </project>
