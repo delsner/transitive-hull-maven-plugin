@@ -20,11 +20,11 @@ It will only output:
 ...
 ```
 
-Assuming we had changed `d/pom.xml` and would like to build all relevant modules, we would in fact miss module `h`.
+Assuming we had changed `d/pom.xml` and would like to build all relevant modules, we would in fact miss module `h` which is required for module `e` to be built.
 
-## Demonstration of transitive hull plugin
+## Demonstration of transitive hull Maven extension
 
-Run `mvn install` in the root of this project (to install the plugin to your local Maven repository).
+Run `mvn install` in the root of this project (to install the extension to your local Maven repository).
 
 Then, navigate to `sample-project` and run:
 
