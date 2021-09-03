@@ -59,7 +59,7 @@ public class TransitiveHullMojo extends AbstractMojo {
     private static List<Path> readProjectPaths(File file) throws IOException {
         BufferedReader br = Files.newBufferedReader(file.toPath());
         return br.lines()
-                .filter(line -> !line.equals(""))
+                .filter(line -> !line.trim().equals(""))
                 .map(line -> {
                     line = line.trim();
                     if (line.endsWith(POM_XML)) {
