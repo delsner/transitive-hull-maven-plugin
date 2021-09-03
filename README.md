@@ -20,7 +20,7 @@ It will only output:
 ...
 ```
 
-Assuming we had changed `d/pom.xml` and would like to build all relevant modules, we would in fact miss module `h`.
+Assuming we had changed `d/pom.xml` and would like to build all relevant modules, we would in fact miss module `h` which is required for module `e` to be built.
 
 ## Demonstration of transitive hull plugin
 
